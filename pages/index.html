@@ -1,0 +1,93 @@
+---
+pages:
+  - title: Intro
+    slides:
+      - title.md
+  - folder: intro
+    slides:
+      - architecture.html
+      - design.html
+      - maintain.html
+  - folder: simple-made-easy
+    slides:
+      - simple-made-easy.md
+      - simplicity-reliability.html
+      - word-origins.html
+      - simple.html
+      - easy.html
+      - limits.html
+  - folder: constructs-vs-artifacts
+    slides:
+      - constructs.html
+      - change.html
+      - debugging.html
+      - development-speed.html
+  - folder: easy-yet-complex
+    slides:
+      - benefits-of-simplicity.html
+  - folder: complect
+    slides:
+      - complect.html
+      - compose.html
+      - spaceship.html
+      - modularity.html
+  - folder: abstraction-for-simplicity
+    slides:
+      - abstraction.html
+      - bad-abstraction.html
+      - basics.html
+      - dont-complect.html
+      - bad-things.html
+      - simple.html
+  - folder: simplicity-is-a-choice
+    slides:
+      - choice.html
+      - presence-of-bugs.html
+  - title: Managing Complexity in your Projects
+    slides:
+      - managing.md
+  - folder: js-crazy
+    slides:
+      - warning.html
+      - react.html
+      - react-run.html
+      - start-hello-world.html
+      - vanilla.html
+      - bell-curve.html
+      - overengineer.html
+  - folder: identifying-complexity
+    slides:
+      - identifying-complexity.md
+      - patterns-and-tools.html
+      - pattern-example.html
+  - folder: mitigating-complexity
+    slides:
+      - identify-patterns-not-tools.html
+      - become-comfortable-with-vanilla.html
+  - folder: choosing-the-right-tool
+    slides:
+      - index.md
+      - operational-strategic-speed.html
+      - speed-of-delivery.html
+      - checklist.html
+      - attributes-of-the-right-tool.html
+  - title: Thanks
+    slides:
+      - thanks.html
+---
+{% extends '_layout.html' %}
+
+{% from '_slide.html' import slide %}
+
+{%block content %}
+
+<main class="_stage">
+  {% for section in pages %}
+    <article class="_stage--group" {% if section.title %}data-title="{{section.title}}"{% endif %}>
+      {% for page in section.slides %}
+        {{ slide(page, section) }}
+      {% endfor %}
+    </article>
+  {% endfor %}
+</main>
+{% endblock %}

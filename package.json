@@ -1,0 +1,16 @@
+{
+  "name": "hackademy-accessibility",
+  "version": "0.0.0",
+  "scripts": {
+    "gulp": "gulp",
+    "start": "gulp",
+    "test": "gulp deploy:dry"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-armadillo": "^5.0",
+    "ibm-design-colors": "^2.0.4",
+    "prismjs": "^1.6.0",
+    "stage-fright": "^0.8.0"
+  }
+}

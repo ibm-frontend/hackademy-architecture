@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% if title %}{{ title }} | {% endif %}Accessibility</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- PRELOAD AND PREFETCH ALL OF THE FONTS! EVERY SINGLE ONE! -->
+  <link rel="dns-prefetch" href="https://1.www.s81c.com/">
+  <link rel="preload" href="https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-regular.woff2" as="font" type="font/woff2" crossorigin="crossorigin">
+  <link rel="preload" href="https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-regularitalic.woff2" as="font" type="font/woff2" crossorigin="crossorigin">
+  <link rel="preload" href="https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-semibold.woff2" as="font" type="font/woff2" crossorigin="crossorigin">
+  <link rel="preload" href="https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-semibolditalic.woff2" as="font" type="font/woff2" crossorigin="crossorigin">
+  <link rel="preload" href="https://1.www.s81c.com/common/fonts/plex/v1/ibmplexmono-regular.woff2" as="font" type="font/woff2" crossorigin="crossorigin">
+  <link rel="preload" href="https://1.www.s81c.com/common/fonts/plex/v1/ibmplexmono-regularitalic.woff2" as="font" type="font/woff2" crossorigin="crossorigin">
+  <link rel="preload" href="https://1.www.s81c.com/common/fonts/plex/v1/ibmplexmono-semibold.woff2" as="font" type="font/woff2" crossorigin="crossorigin">
+  <link rel="preload" href="https://1.www.s81c.com/common/fonts/plex/v1/ibmplexmono-semibolditalic.woff2" as="font" type="font/woff2" crossorigin="crossorigin">
+
+  <!-- Load CSS and JavaScript -->
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+  {% block content %}{% endblock %}
+
+
+</body>
+</html>

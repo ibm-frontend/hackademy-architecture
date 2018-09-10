@@ -1,0 +1,252 @@
+$primary: 'yellow';
+
+@import 'stage-fright';
+
+
+// [data-state='intro'] {
+//   @include awesome-header(color('cool-gray', 10), color('cool-gray', 30));
+//   h1 {
+//     color: color('yellow', 40);
+//   }
+// }
+
+.javascript {
+  height: 1em;
+  width: 1em;
+  height: 1em;
+  box-sizing: border-box;
+  text-align: right;
+  color: black;
+  background-color: yellow;
+  display: inline-block;
+
+  &--text {
+    display: inline-block;
+    font-size: .5em;
+    font-weight: bold;
+    transform: translateX(-.5rem) translateY(-.45rem);
+  }
+}
+
+.ft-page--footnote {
+  position: absolute;
+  left: 0rem;
+  bottom: 0rem;
+  padding: .5rem;
+  font-size: .75em;
+  text-transform: lowercase;
+  background: rgba(white, .25);
+  width: 100%;
+}
+
+.ft-page li {
+  line-height: 1.25;
+
+  + li {
+    margin-top: 1rem;
+  }
+}
+
+
+.ft-page--content {
+  @include clearfix;
+}
+
+.ft-page {
+  .small {
+    font-size: .75em;
+    text-transform: lowercase;
+    font-style: italic;
+    margin-top: 0;
+  }
+
+  .half {
+    float: left;
+    position: relative;
+    width: 50%;
+    &:nth-of-type(odd) {
+      padding-right: 1rem;
+    }
+    &:nth-of-type(even) {
+      padding-left: 1rem;
+    }
+  }
+
+  .full {
+    float: left;
+    position: relative;
+    clear: both;
+    width: 100%;
+    padding-top: 1rem;
+  }
+
+  .word {
+
+    color: color('blue');
+  }
+  h3.word {
+    font-size: 1.5em;
+    line-height: 1;
+    margin-bottom: 0;
+  }
+
+  .indent {
+    margin-left: 1rem;
+  }
+
+  .origin {
+    font-style: italic;
+    margin-top: .5rem;
+
+  }
+  .definition {
+    color: color('green');
+    margin-top: .5rem;
+  }
+  .versus {
+    margin-top: .5rem;
+  }
+  .antonym {
+    color: color('red');
+  }
+
+}
+
+.ft-page blockquote {
+  font-size: 1.5em;
+
+  footer {
+    font-size: .6em;
+    margin-top: 2rem;
+  }
+}
+
+.top-image {
+  position: relative;
+  z-index: 5;
+  width: 53%;
+  float: left;
+  img {
+    border: 5px ridge color('yellow', 30);
+    box-shadow: 3px 3px 10px rgba(black, .5);
+  }
+}
+.bottom-image {
+  position: relative;
+  width: 53%;
+  float: right;
+  margin-top: -1.25rem;
+  img {
+    border: 5px ridge color('yellow', 30);
+    box-shadow: 3px 3px 10px rgba(black, .5);
+  }
+}
+
+[data-state] {
+  background-size: cover;
+}
+
+[data-state='spaceship'] {
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: black;
+}
+
+[data-state='bad'] {
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: black;
+  background-image: url('../images/freddy-2.gif');
+  h3 {
+    color: transparent;
+  }
+}
+
+%SICstates {
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: black;
+  h2,
+  a {
+    text-shadow: 2px 2px black, -2px -2px black, 2px -2px black, 2px -2px black, 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black, 3px 3px black, -3px -3px black, 3px -3px black, -3px 3px black, 3px 0 black, -3px 0 black, 0 3px black, 0 -3px black;
+  }
+}
+
+[data-state='react'] {
+  @extend %SICstates;
+  background-image: url('../images/ready.jpg');
+
+  h3 {
+    color: transparent !important;
+  }
+}
+
+[data-state='identify'] {
+  @extend %SICstates;
+  background-image: url('../images/identify.gif');
+}
+
+[data-state='shrink'] {
+  @extend %SICstates;
+  background-image: url('../images/shrink.gif');
+}
+
+[data-state='choose'] {
+  @extend %SICstates;
+  background-image: url('../images/choose.gif');
+}
+
+.stretch {
+  width: 100%;
+}
+
+//////////////////////////////
+// Stacked
+//////////////////////////////
+.stack {
+  width: 100%;
+  height: 80vh;
+  margin: 0;
+  position: relative;
+  text-align: center;
+
+  &ed {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+
+    img {
+      max-height: 100%;
+      width: auto;
+    }
+  }
+}
+
+
+
+.blink,
+.blink-2,
+.blink-3 {
+  animation: blink 1s steps(5, start) infinite;
+  animation-delay: 0s;
+}
+
+.blink-2 {
+  animation-delay: .1s;
+}
+
+.blink-3 {
+  animation-delay: .2s;
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}

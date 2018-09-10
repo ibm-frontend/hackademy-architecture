@@ -1,0 +1,22 @@
+---
+footnote: >
+  [Why JavaScript Development is Crazy](http://www.planningforaliens.com/blog/2016/04/11/why-js-development-is-crazy/)
+---
+<pre><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+    &lt;title&gt;Hello World&lt;/title&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    &lt;div id="container"&gt;&lt;/div&gt;
+    &lt;script&gt;
+     document.body.onload = function(){
+       var container = document.getElementById('container');
+       container.innerHTML = '&lt;h1&gt;"Hello, world!"&lt;/h1&gt;';
+     }
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
